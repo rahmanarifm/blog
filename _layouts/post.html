@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article  class="pa5 mt4 bg-white-70 bt b--black-20 lh-copy">
+<article  class="pa5-l pa3 mt4 bg-white-70 bt b--black-20 lh-copy">
 
     <div class="mw7 center">
     <h1 class="black-70">{{ page.title | escape }}</h1>
@@ -9,7 +9,7 @@ layout: default
     <p class="black-50 ma0 f6">
       <strong>Tags: </strong>
       {%- for tag in page.tags -%}
-        <a class="link underlind black-40 dim" href="#">{{ tag }}</a>&nbsp;
+        <a class="link underlind black-40 dim" href="/tag/{{ tag }}/">{{ tag }}</a>&nbsp;
       {%- endfor -%}
     </p>
     <div class="article-content">

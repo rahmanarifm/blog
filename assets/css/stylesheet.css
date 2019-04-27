@@ -31,11 +31,11 @@
   font-family: athelas,georgia,serif
 }
 
-/* .article-content code:not(.hljs)  {
-  background-color: #f4f4f4;
+.article-content code.highlighter-rouge {
   color: #ff4136;
+  background-color: #f4f4f4;
   padding: 2px;
-} */
+}
 
 .article-content blockquote {
   font-family: athelas,georgia,serif;

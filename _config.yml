@@ -30,6 +30,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll/tagging
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -42,3 +43,7 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty

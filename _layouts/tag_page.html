@@ -2,13 +2,12 @@
 layout: default
 ---
 
-{{ content }}
-<section class="pa5-l pa3">
-{%- if site.posts.size > 0 -%}
-  <h3 class="fw3 ttu tracked black-60">Writing / Tutorials</h3>
+
+<section class="pa5">
+  <h3 class="fw3 ttu tracked black-60">{{ page.tag }}</h3>
   <ul class="ul list pa0 f5 code">
     {%- for post in site.posts -%}
-    <li class="li pv2 black-40">
+    <li class="li pa2 black-40">
       <a class="a b black-50 link hover-dark-blue underline" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
       </a>
@@ -18,7 +17,4 @@ layout: default
     </li>
     {%- endfor -%}
   </ul>
-{%- endif -%}
-
-
 </section>
