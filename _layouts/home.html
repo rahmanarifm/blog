@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{{ content }}
+<section class="pa5">
+{%- if site.posts.size > 0 -%}
+  <h3 class="fw3 ttu tracked black-60">Writing / Tutorials</h3>
+  <ul class="ul list pa0 f5 code">
+    {%- for post in site.posts -%}
+    <li class="li pa2 black-40">
+      <a class="a b black-50 link hover-dark-blue underline" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <aside class="pa0 ma0 f6 i">{{ post.date | date: "%b %-d, %Y" }}</aside>
+
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
+
+{%- if site.links.size > 0 -%}
+  <h3 class="fw3 ttu tracked black-60">Writing / Tutorials</h3>
+  <ul class="ul list pa0 f5 code">
+    {%- for link in site.links -%}
+    <li class="li pa2 black-40">
+      <a class="a b black-50 link hover-dark-blue underline" href="{{ link.url | relative_url }}">
+        {{ link.title | escape }}
+      </a>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <aside class="pa0 ma0 f6 i">{{ link.date | date: "%b %-d, %Y" }}</aside>
+
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
+
+
+</section>

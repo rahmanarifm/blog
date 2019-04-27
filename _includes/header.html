@@ -1,0 +1,26 @@
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- if page_paths -%}
+  <nav class="db dt-l w-100 border-box pa3 ph5-l fixed top-0 bg-yellowish">
+    <div class="db dtc-l v-mid w-100 w-75-l">
+<!-- <a href='/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">Archive</a>
+<a href='./about/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">Tags</a>
+<a href='./about/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">About</a> -->
+      <a class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l" href="/">Archive</a>
+      {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title -%}
+          <a class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </nav>
+{%- endif -%}
+  <section class="center pt6-ns pt5 pl5">
+<!-- <a href='/' class="f1 fw3 black link">Ø</a> -->
+<header>
+<h1 class="mt2 mb0 fw3 athelas tracked f3 ttl">øverlandandseas</h1>
+<h2 class="mt2 mb0 f6 fw3 ttu tracked black-60">PROJECTS & WRITINGS ABOUT PROGRAMMING AND MUSIC</h2>
+<h3 class="mt2 mb0 f6 fw4 tracked athelas black-80">Chicago / SF</h3>
+</header>
+</section>

@@ -1,0 +1,68 @@
+@import "tachyons.min.css";
+@import "monokai.css";
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.faded {
+  transition: opacity .75s ease-in;
+}
+
+.bg-brownish {
+  background: #fffcf3;
+  background: linear-gradient(to top, #f9e7f0, #fffcf3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-yellowish {
+  background: #fffcf3;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  color: rgba(0,0,0,0.6);
+}
+
+.article-content p {
+  font-family: athelas,georgia,serif
+}
+
+/* .article-content code:not(.hljs)  {
+  background-color: #f4f4f4;
+  color: #ff4136;
+  padding: 2px;
+} */
+
+.article-content blockquote {
+  font-family: athelas,georgia,serif;
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 2rem;
+  color: rgba(0,0,0,0.9);
+  border-width: .25rem;
+  border-color: #333;
+  border-left-style: solid;
+}
+
+.article-content blockquote p {
+  max-width: 30em;
+  font-size: 1.25rem;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.article-content div.highlight {
+  border-radius: .25rem;
+  border-color: #777;
+  border-style: solid;
+  border-width: 1px;
+  padding: 8px;
+}
+
+.article-content pre {
+  margin: 0;
+}
