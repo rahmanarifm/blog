@@ -2,7 +2,7 @@
 layout: post
 title: "Lightbox from scratch"
 date: 2017-02-1T20:52:03-05:00
-tags: [javascript, web]
+tags: [javascript, web, hello, from, github]
 
 ---
 
