@@ -47,7 +47,7 @@ return fooCondition
 Often we can place these into an object if we want to get results based on a few parameters.
 
 ```js
-return {
+return ({
   true: {
     true: 'bingo bango bongo',
     false: 'bish bash bosh',
@@ -56,13 +56,13 @@ return {
     true: 'ez peazy lemon squeezy',
     false: '',
   },
-}[fooCondition][barCondition];
+})[fooCondition][barCondition];
 ```
 <br>
 <br>
 We can code golf this up a bit.
 ```js
-return {
+return ({
   1: {
     1: 'bingo bango bongo',
     0: 'bish bash bosh',
@@ -71,16 +71,17 @@ return {
     1: 'ez peazy lemon squeezy',
     0: '',
   },
-}[+fooCondition][+barCondition];
+})[+fooCondition][+barCondition];
 ```
 <br>
 <br>
-Wait, an object with numbers for keys is just an array.
+An object with numbers for keys is just an array.
 ```js
-return [['bingo bango bongo', 'bish bash bosh'], ['ez peazy lemon squeezy', '']][
-  +fooCondition
-][+barCondition];
+return [
+  ['bingo bango bongo', 'bish bash bosh'],
+  ['ez peazy lemon squeezy', '']
+][ +fooCondition ][ +barCondition ];
 ```
 <br>
 <br>
-Perfect.
+Much better.
