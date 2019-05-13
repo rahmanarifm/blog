@@ -77,10 +77,9 @@ return ({
 <br>
 An object with numbers for keys is just an array.
 ```js
-return [
-  ['bingo bango bongo', 'bish bash bosh'],
-  ['ez peazy lemon squeezy', '']
-][ +fooCondition ][ +barCondition ];
+return [['bingo bango bongo', 'bish bash bosh'], ['ez peazy lemon squeezy', '']][+fooCondition][
+  +barCondition
+];
 ```
 <br>
 <br>
