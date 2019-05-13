@@ -1,0 +1,23 @@
+//Saw this in a PR at work
+
+let result = '';
+
+if (!bar && foo) {
+  result = 'bingo bango bongo';
+} else if (bar && foo) {
+  result = 'bish bash bosh';
+} else if (bar) {
+  result = 'ez peazy lemon squeezy';
+}
+
+return result;
+// or something similar, made me thing of how you could write this cleaner.
+
+if (!bar && foo) {
+  return 'bingo bango bongo';
+} else if (bar && foo) {
+  return 'bish bash bosh';
+} else if (bar) {
+  return'ez peazy lemon squeezy';
+}
+return '';
