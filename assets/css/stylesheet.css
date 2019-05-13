@@ -27,14 +27,28 @@
   color: rgba(0,0,0,0.6);
 }
 
+.article-content {
+  font-size: 1.15rem;
+}
+
+.article-content a {
+  color: #357edd;
+  text-decoration: none;
+}
+
+.article-content a:hover {
+  color: #357edd;
+  text-decoration: underline;
+}
+
 .article-content p {
-  font-family: athelas,georgia,serif
+  font-family: athelas,georgia,serif;
 }
 
 .article-content code.highlighter-rouge {
-  color: #ff4136;
-  background-color: #f4f4f4;
+  background-color: #eee;
   padding: 2px;
+  font-size: 0.9rem;
 }
 
 .article-content blockquote {
@@ -65,4 +79,5 @@
 
 .article-content pre {
   margin: 0;
+  font-size: 0.85rem;
 }
