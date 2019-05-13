@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Conditional Map in JS"
-date: 2019-05-10T00:52:03-05:00
+date: 2019-05-13T00:52:03-05:00
 tags: [javascript]
 permalink: "/posts/conditional-map-js/"
 ---
