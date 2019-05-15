@@ -8,7 +8,7 @@ permalink: "/posts/session-storage/"
 [Session storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) is available on the global window object, it’s API is very similar to `localStorage` but I cannot think of one case when I used it. Mdn states that `sessionStorage` is cleared when the page session ends.
 > A page session lasts for as long as the browser is open and survives over page reloads and restores.
 
-Below let’s have two outputs, one that is pulling from `localStorage`, another pulling from `sessionStorage`.
+Below let’s have three outputs, one that is pulling from `localStorage`, another pulling from `sessionStorage`, and the last showing regular javascript memory.
 ### Session storage example
 How does a static site such as this one handle a session? The below output will reset when the browser or tab is closed.
 
