@@ -9,12 +9,12 @@ layout: default
 
   <ul class="ul list pa0 f5 mw7">
     {%- for post in site.posts -%}
-    <li class="li pv2 black-40 flex justify-between">
-      <a class="a b black-80 link hover-red link f5 code" href="{{ post.url | relative_url }}">
+    <li class="pl0 pl4-ns li pv2 black-40 flex justify-between">
+      <a class="a black-80 link hover-red link f5 code" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
       </a>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <aside class="pa0 ma0 f6 code">{{ post.date | date: "%b %-d, %Y" }}</aside>
+      <aside class="pa0 ma0 f6 code">{{ post.date | date: "%b %d, %Y" }}</aside>
 
     </li>
     {%- endfor -%}
