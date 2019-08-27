@@ -16,7 +16,7 @@
 title: Øverlandandseas
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Projects & writings about programming and music
+  Overthinking javascript and everything else
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://overlandandseas.com" # the base hostname & protocol for your site, e.g. http://example.com
 location: "Chicago / SF"
