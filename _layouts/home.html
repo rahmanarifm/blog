@@ -3,14 +3,14 @@ layout: default
 ---
 
 {{ content }}
-<section class="pa5-l pa3 fade" id="home-section">
+<section class="pa5-l pa3">
 {%- if site.posts.size > 0 -%}
   <h3 class="fw3 ttu tracked black-60">Writing / Tutorials</h3>
 
   <ul class="ul list pa0 f5 mw7">
     {%- for post in site.posts -%}
     <li class="pl0 pl4-ns li pv2 black-40 flex justify-between">
-      <a class="a black-80 link hover-red link f5 code js-article-link" href="{{ post.url | relative_url }}">
+      <a class="a black-80 link hover-red link f5 code" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
       </a>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
