@@ -49,6 +49,7 @@
   background-color: #eee;
   padding: 2px;
   font-size: 0.9rem;
+  color: #ff4136;
 }
 
 .article-content blockquote {
@@ -60,6 +61,15 @@
   border-width: .25rem;
   border-color: #333;
   border-left-style: solid;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-family: Consolas, monaco, monospace
 }
 
 .article-content blockquote p {

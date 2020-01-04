@@ -1,4 +1,4 @@
-const ARTICLE_CLASSLIST = 'pa5-l pa3 mt4 bt bg-white b--black-20 lh-copy fade';
+const ARTICLE_CLASSLIST = 'pa5-l pa3 mt4 b--black-20 lh-copy fade';
 const HOME_CLASSLIST = 'pa5-l pa3 fade';
 
 

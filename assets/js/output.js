@@ -40,7 +40,7 @@ System.register("fetch_service", [], function (exports_1, context_1) {
     return {
         setters: [],
         execute: function () {
-            ARTICLE_CLASSLIST = 'pa5-l pa3 mt4 bt bg-white b--black-20 lh-copy fade';
+            ARTICLE_CLASSLIST = 'pa5-l pa3 mt4 b--black-20 lh-copy fade';
             HOME_CLASSLIST = 'pa5-l pa3 fade';
             ELEMENT_CACHE = new Map();
         }
