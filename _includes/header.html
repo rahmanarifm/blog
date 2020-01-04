@@ -6,7 +6,7 @@
 <!-- <a href='/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">Archive</a>
 <a href='./about/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">Tags</a>
 <a href='./about/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">About</a> -->
-      <a class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l" href="/">Archive</a>
+      <a class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l js-nav-link" id="homepage-link" href="/">Archive</a>
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
         {%- if my_page.title -%}

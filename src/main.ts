@@ -1,18 +1,19 @@
+import { getArticle, getHomeSection } from './fetch_service'
 import { hold } from './utils'
-import { getArticle } from 'fetch_service'
 
 const WAIT_TIME: number = 250;
 const MAIN_DIV: HTMLElement = document.getElementById('main-div');
 
+
 async function handleArticleTransition(evt: Event) {
   evt.preventDefault()
 
-  let homeSection: HTMLElement = document.getElementById('home-section');
+  let homeSection: HTMLElement = await getHomeSection(window.location.pathname);
   let target = <HTMLAnchorElement> evt.target;
 
   homeSection.classList.add('o-0');
   let [ article ] = await Promise.all([getArticle(target.href), hold(WAIT_TIME)]);
-
+  article.classList.add('o-0')
   homeSection.parentNode.removeChild(homeSection);
   MAIN_DIV.appendChild(article);
 
@@ -24,9 +25,17 @@ async function handleArticleTransition(evt: Event) {
   window.addEventListener('popstate', createBackButton(article, homeSection));
 };
 
+
+async function handeHomePageNavigation(evt: Event) {
+  evt.preventDefault();
+
+}
+
 function createBackButton(prevElm: HTMLElement, nextElm: HTMLElement) {
 
   return async function listener(evt: Event) {
+    evt.preventDefault();
+
     prevElm.classList.add('o-0');
     await hold(WAIT_TIME);
 
@@ -40,12 +49,14 @@ function createBackButton(prevElm: HTMLElement, nextElm: HTMLElement) {
 }
 
 
-export function attatchArticleEventHandlers() {
+export function attatchEventHandlers() {
   Array.prototype.forEach.call(
     document.getElementsByClassName('js-article-link'),
     (elm: HTMLElement) => elm.addEventListener('click', handleArticleTransition)
   );
+
 }
 
 
-attatchArticleEventHandlers();
+
+attatchEventHandlers();
