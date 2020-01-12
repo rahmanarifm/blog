@@ -5,21 +5,22 @@
 
   <body class="bg-near-white">
     <div class="min-vh-100" id="main-div">
-    {%- include header.html -%}
+    {%- include nav.html -%}
+
 
 
       {{ content }}
 
   </div>
   <!-- <script src="{{ "/assets/js/system.js" | relative_url }}" charset="utf-8" type="text/javascript"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.2/system.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.2/system.js"></script>
   <script src='{{ "/assets/js/output.js" | relative_url }}' charset="utf-8" type="text/javascript"></script>
   <script src="https://raw.githack.com/systemjs/systemjs/master/src/extras/named-register.js" charset="utf-8"></script>
   <script>
     System.import('{{ "/assets/js/output.js" | relative_url }}').then(_ =>
       System.import('main')
     )
-  </script>
+  </script> -->
   </body>
 
 </html>

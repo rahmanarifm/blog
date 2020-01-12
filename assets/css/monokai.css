@@ -49,7 +49,7 @@
 .highlight .nx { color: #8fa1b3 } /* Name.Other */
 .highlight .py { color: #eff1f5 } /* Name.Property */
 .highlight .nt { color: #96b5b4 } /* Name.Tag */
-.highlight .nv { color: #bf616a } /* Name.Variable */
+.highlight .nv { color: #96b5b4 } /* Name.Variable */
 .highlight .ow { color: #96b5b4 } /* Operator.Word */
 .highlight .w { color: #eff1f5 } /* Text.Whitespace */
 .highlight .mf { color: #d08770 } /* Literal.Number.Float */

@@ -1,0 +1,33 @@
+.list-group .icon::before,
+.list-tree .icon::before,
+.icon-file-directory::before {
+  display: none;
+}
+.list-item.project-root-header .icon-repo::before {
+  display: inline-block;
+}
+
+.expanded > .list-item > .icon-file-directory::after {
+  content: ' /';
+}
+
+.collapsed > .list-item > .icon-file-directory::after {
+  content: '/';
+}
+
+.list-group .header.header.header.header::before,
+.list-tree .header.header.header.header::before {
+  display: none;
+}
+
+.list-tree.has-collapsable-children li.list-item {
+  margin-left: 0;
+}
+
+.tree-view {
+  font-family: 'DejaVu Sans Mono';
+}
+
+.atom-dock-toggle-button-visible {
+    display: none;
+}

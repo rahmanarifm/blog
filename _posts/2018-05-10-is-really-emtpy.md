@@ -2,7 +2,7 @@
 layout: post
 title: "is-really-empty 🌌"
 date: 2018-05-10T20:52:03-05:00
-tags: [javascript, node]
+tags: [javascript]
 permalink: "/posts/is-really-empty/"
 ---
 [![npm](https://img.shields.io/npm/v/is-really-empty.svg)](https://www.npmjs.com/package/is-really-empty)
