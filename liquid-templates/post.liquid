@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>overlandandseas.website | {{ screenshot.name}}</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+  </head>
+  <body class="code">
+    <article>
+      <h2 class="f3 fw4 pa3 mv0">changlog of <a href="https://www.overlandandseas.com" class="link underline-hover gray">overlandandseas.com</a> for date {{ screenshot.name}}</h2>
+      <a href="/" class="db ph3 pv2 link underline-hover gray">&lt; Back to list</a>
+      <a href="https://github.com/overlandandseas/overlandandseas.com/commit/{{ screenshot.commit }}" class="db link ph3 pv2 gray underline-hover"> commit {{ screenshot.commit }}</a>
+      <div class="cf pa2">
+        <div class="w-100 mw8 pa2">
+            <img src="/screenshots/{{screenshot.name}}.jpg" class="w-100 db outline black-10"/>
+            <dl class="mt2 f6 lh-copy">
+              <dd class="ml0 black truncate w-100">Home page</dd>
+              <dd class="ml0 gray truncate w-100"></dd>
+            </dl>
+        </div>
+        <div class="w-100 mw8 pa2">
+            <img src="/screenshots/{{screenshot.name}}-post.jpg" class="w-100 db outline black-10"/>
+            <dl class="mt2 f6 lh-copy">
+              <dd class="ml0 black truncate w-100">Post page</dd>
+              <dd class="ml0 gray truncate w-100">{{screenshot.date}} {{screenshot.year}}</dd>
+            </dl>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
