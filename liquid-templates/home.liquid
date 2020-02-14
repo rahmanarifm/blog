@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>overlandandseas.website</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+  </head>
+  <body class="code">
+    <article>
+      <h2 class="f3 fw4 pa3 mv0 code">changlog of <a href="https://overlandandseas.com/" class="link underline-hover gray">overlandandseas.com</a></h2>
+      {% for screenshot in screenshots %}
+      <div class="cf pa2">
+        <div class="fl w-100 w-25-m w-25-l mw8 pa2">
+          <a href="/{{screenshot.name}}.html" class="db link dim tc">
+            <img src="/screenshots/{{screenshot.fileName}}" class="w-100 db outline black-10"/>
+            <dl class="mt2 f6 lh-copy">
+              <dt class="clip">Date</dt>
+              <dd class="ml0 black truncate w-100">{{screenshot.date}}</dd>
+              <dt class="clip">Year</dt>
+              <dd class="ml0 gray truncate w-100">{{screenshot.year}}</dd>
+            </dl>
+          </a>
+        </div>
+        {% endfor %}
+        <!-- <div class="fl w-100 w-25-m w-25-l mw8 pa2">
+          <a href="/" class="db link dim tc">
+            <img src="/screenshots/2020-2-13.jpg" class="w-100 db outline black-10"/>
+            <dl class="mt2 f6 lh-copy">
+              <dt class="clip">Date</dt>
+              <dd class="ml0 black truncate w-100">13 February</dd>
+              <dt class="clip">Year</dt>
+              <dd class="ml0 gray truncate w-100">2020</dd>
+            </dl>
+          </a>
+        </div>
+        <div class="fl w-100 w-25-m w-25-l mw8 pa2">
+          <a href="/" class="db link dim tc">
+            <img src="/screenshots/2020-1-19.jpg" class="w-100 db outline black-10"/>
+            <dl class="mt2 f6 lh-copy">
+              <dt class="clip">Date</dt>
+              <dd class="ml0 black truncate w-100">19 January</dd>
+              <dt class="clip">Year</dt>
+              <dd class="ml0 gray truncate w-100">2020</dd>
+            </dl>
+          </a>
+        </div> -->
+      </div>
+    </article>
+  </body>
+</html>
