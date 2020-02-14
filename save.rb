@@ -18,14 +18,7 @@ sleep 3
 
 puts "jekyll site loaded."
 
-fork do
-  exec(
-    "/mnt/c/Program\\ Files/Firefox\\ Nightly/firefox.exe -headless --screenshot '..\\website.overlandandseas\\screenshots\\"
-      .concat(screenshot_name, ".jpg' 'localhost:8080'")
-  )
-end
-
-puts "Screenshot printed"
+system("/mnt/c/Program\\ Files/Firefox\\ Nightly/firefox.exe -P screenshots --screenshot '../website.overlandandseas/screenshots/#{screenshot_name}.jpg' http://localhost:4000")
 
 Process.kill(9, pid)
 puts "server killed"
@@ -43,23 +36,28 @@ screenshots_hash.push(
     "name": screenshot_name,
     "date": current_date,
     "year": current_year,
-    "homepagefilename": screenshot_name.concat(".jpg"),
-    "postfileaname": screenshot_name.concat(".jpg"),
+    "filename": "#{screenshot_name}.jpg",
+    "postfileaname": "#{screenshot_name}-post.jpg",
     "commit": commit
   }
 )
-File.write("screenshots.json", screenshots_hash.to_json)
+File.write("screenshots.json", JSON.pretty_generate(screenshots_hash))
+
+#  redo this for some reason
+screenshots_file = File.read "screenshots.json"
+screenshots_hash = JSON.parse screenshots_file
 
 # create home page
 template_string = File.read "liquid-templates/index.liquid"
 template = Liquid::Template.parse template_string
 homepage = template.render("screenshots" => screenshots_hash)
-File.write("../website.overlandandseas.com/index.html", homepage)
+File.write("../website.overlandandseas/index.html", homepage)
 
 # create post pages
 post_template_string = File.read "liquid-templates/post.liquid"
 post_template = Liquid::Template.parse post_template_string
-screenshot_hash.each do |shot|
-  @post = post_template.render("screenshot" => shot)
-  File.write("../website.overlandandseas.com/posts/".concat(shot.name, ".html"))
+screenshots_hash.each do |shot|
+  post = post_template.render("screenshot" => shot)
+  name = shot["name"]
+  File.write("../website.overlandandseas/posts/#{name}.html", post)
 end
