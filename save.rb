@@ -10,18 +10,19 @@ screenshot_name = d.strftime("%Y-%m-%d")
 current_date = d.strftime("%d %B")
 current_year = d.strftime("%Y")
 
-puts "Loading jekyll site..."
-
-pid = fork { exec("bundle exec jekyll s") }
-
-sleep 3
-
-puts "jekyll site loaded."
+# puts "Loading jekyll site..."
+#
+# pid = fork { exec("bundle exec jekyll s") }
+#
+# sleep 3
+#
+# puts "jekyll site loaded."
 
 system("/mnt/c/Program\\ Files/Firefox\\ Nightly/firefox.exe -P screenshots --screenshot '../website.overlandandseas/screenshots/#{screenshot_name}.jpg' http://localhost:4000")
+system("/mnt/c/Program\\ Files/Firefox\\ Nightly/firefox.exe -P screenshots --screenshot '../website.overlandandseas/screenshots/#{screenshot_name}-post.jpg' http://localhost:4000/2017/lightbox-front-scratch/")
 
-Process.kill(9, pid)
-puts "server killed"
+# Process.kill(9, pid)
+# puts "server killed"
 
 # load commit
 commit = File.read(".git/refs/heads/master").split[0]
