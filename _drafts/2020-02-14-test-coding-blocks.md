@@ -17,3 +17,6 @@ However text is different because it's not the same width for each char present.
 ```
 With code, using the text I have by default on the site it goes to exactly here.
 ```
+
+### heading 3
+Testing to see how long exactly 80 chars is within the width of the section tag.
