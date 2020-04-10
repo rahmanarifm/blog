@@ -8,10 +8,13 @@ permalink: "/posts/illegal-methods-in-typescript/"
 In javascript, we can create functions on the prototype of existing classes.
 ```js
 Number.prototype.factorial = function() {
-  return new Array(this.valueOf()).fill().reduce((acc, _, index) => acc * (index + 1), 1)
-}
+  return new Array(this.valueOf())
+    .fill()
+    .reduce((acc, _, index) => acc * (index + 1), 1);
+};
 
-5..factorial() // <- 120
+(5).factorial(); // <- 120
+
 ```
 
 However, in typescript, this is not allowed
@@ -30,7 +33,9 @@ We can add `// @ts-ignore` before every line and this will work, but what if we 
 Another way is to use `eval`
 ```ts
 eval(
-  "Number.prototype.factorial=function(){return new Array(+this).fill().reduce((a,_,i)=>a*(i+1),1)}"
+  `Number.prototype.factorial = function() {
+  	return new Array(+this).fill().reduce((a, _, i) => a * (i + 1), 1);
+   };`
 )
 ```
 
@@ -43,9 +48,12 @@ Since we can import typescript modules in javascript and the other way around, w
 // util.js
 export function createIllegalMethod() {
   Number.prototype.factorial = function() {
-    return new Array(this.valueOf()).fill().reduce((acc, _, index) => acc * (index + 1), 1)
-  }
+    return new Array(this.valueOf())
+      .fill()
+      .reduce((acc, _, index) => acc * (index + 1), 1);
+  };
 }
+
 ```
 ...and import it in our typescript modules.
 ```ts
