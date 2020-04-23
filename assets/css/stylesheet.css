@@ -113,13 +113,13 @@
 }
 
 
-.article-content ul {
-  font-weight: 600;
+.article-content ul, .article-content ol {
+  font-weight: 300;
   font-family: Consolas, monaco, monospace;
   padding-left: 20px;
 }
 
-.article-content li {
+.article-content ul li {
   list-style-type: none;
 }
 
