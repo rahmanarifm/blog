@@ -4,9 +4,9 @@ title: "Learning Svelte"
 tags: [javascript, svelte]
 permalink: "/posts/learning-svelte/"
 ---
-This post is my notes when creating [All in pre Flop](https://github.com/overlandandseas/all-in-pre-flop), a small svelte used to determine the odds of winning a hand at hold'em.
+This post is my notes when creating [All in pre Flop](https://github.com/overlandandseas/all-in-pre-flop), a small svelte app used to determine the odds of winning a hand at hold'em.
 
-Svelte is very easy to get started, the starter command create a minimal project.
+Svelte is very easy to get started, the starter command creates a minimal project.
 ```bash
 npx degit sveltejs/template all-in-pre-flop-svelte
 
