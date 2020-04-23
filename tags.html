@@ -1,0 +1,41 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<article class="pt5-l pa3-l pa3 mt4 b--black-20 lh-copy fade">
+    <div class="mw7 center">
+      <div class="vh-100">
+        <h1 class="black-70 code f2">Tags</h1>
+        <ul class="list pl0 measure mb5">
+          {%- for tag in site.tags -%}
+          <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+            <a href="/tags#{{tag[0]}}" class="link hover-blue black-80 code">{{ tag[0] }} ({{tag[1].size}})</a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- for tag in site.tags -%}
+      <div class="vh-100">
+        <h2 class="code black-70 pt7" id="{{tag[0]}}">{{tag[0]}} <a href="#" class="ml4 f5 code link dim black-30">back to list</a></h2>
+
+        <ul class="ul list">
+          {%- for post in tag[1] %}
+          <li class="li pv2 black-40 flex justify-between">
+            <a class="link f5 code blue underline-hover" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <aside class="pa0 ma0 f6 code">{{ post.date | date: "%b %d, %Y" }}</aside>
+
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endfor -%}
+  </div>
+</article>

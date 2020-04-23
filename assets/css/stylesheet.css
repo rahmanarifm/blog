@@ -116,7 +116,6 @@
 .article-content ul, .article-content ol {
   font-weight: 300;
   font-family: Consolas, monaco, monospace;
-  padding-left: 20px;
 }
 
 .article-content ul li {

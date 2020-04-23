@@ -6,15 +6,21 @@ layout: default
 
     <div class="mw7 center">
     <h1 class="black-70 code f2">{{ page.title | escape }}</h1>
-    <p class="gray ma0 f6 code"><strong>Publish date: </strong>{{ page.date | date: "%b %-d, %Y" }}</p>
-    {% if page.tags.size > 0 %}
-      <p class="gray ma0 f6 code">
-        <strong>Tags: </strong>
-        {%- for tag in page.tags -%}
-          <span class="black-40">{{ tag }}</span>&nbsp;
-        {%- endfor -%}
-      </p>
-    {% endif %}
+    <div class="flex justify-between">
+
+      {%if page.date %}
+        <p class="gray ma0 f6 code">Published {{ page.date | date: "%b %-d, %Y" }}</p>
+      {% endif %}
+
+      {% if page.tags.size > 0 %}
+        <p class="gray ma0 f6 code">
+          {%- for tag in page.tags -%}
+            <a href="/tags#{{tag}}" class="link hover-blue black-40">{{ tag }}</a>&nbsp;
+          {%- endfor -%}
+        </p>
+      {% endif %}
+
+    </div>
     <div class="article-content">
       {{ content }}
     </div>
