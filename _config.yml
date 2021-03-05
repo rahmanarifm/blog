@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Overthinking SRE and everything else
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://broadmin.com" # the base hostname & protocol for your site, e.g. http://example.com
-location: "Yk / Jk"
+location: "Tgl / Jkt"
 
 
 permalink: /:year/:title/
